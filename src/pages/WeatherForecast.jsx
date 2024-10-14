@@ -14,8 +14,8 @@ const WeatherForecast = () => {
   );
 
   return (
-    <div className="container mx-auto p-4 lg:px-20">
-      <h1 className="text-2xl font-bold text-center mb-6">พยากรณ์อากาศ 7 วัน</h1>
+    <div className="container mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-20 2xl:px-20 pt-8">
+      <h1 className="text-xl sm:text-2xl font-bold text-center mb-4">พยากรณ์อากาศ 7 วัน</h1>
 
       {/* Search bar */}
       <input
@@ -29,12 +29,13 @@ const WeatherForecast = () => {
       {filteredProvinces.length > 0 ? (
         filteredProvinces.map((province, index) => (
           <div key={index} className="bg-white shadow-md rounded-2xl p-6 mb-8">
-            <h2 className="text-xl font-bold mb-4">
+            <h2 className="text-base sm:text-lg text-center font-bold mb-4">
               {province.ProvinceNameThai} ({province.ProvinceNameEnglish})
             </h2>
 
+            {/* เพิ่มการทำให้ table เลื่อนได้ในหน้าจอขนาดเล็ก */}
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-gray-300 text-xs sm:text-sm lg:text-base">
+              <table className="w-full min-w-[640px] sm:min-w-[680px] border-collapse border border-gray-300 text-xs sm:text-sm lg:text-base">
                 <thead>
                   <tr>
                     <th className="border border-gray-300 p-1 sm:p-2">วันที่</th>

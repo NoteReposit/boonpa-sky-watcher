@@ -25,8 +25,8 @@ const WeatherList = () => {
   });
 
   return (
-    <div className="container mx-auto p-4 px-20">
-      <h1 className="text-2xl font-bold text-center mb-4">รายงานสภาพอากาศ</h1>
+    <div className="container mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-20 2xl:px-20 pt-8">
+      <h1 className="text-xl sm:text-2xl font-bold text-center mb-4">รายงานสภาพอากาศ</h1>
       {/* Search bar */}
       <input
         type="text"
@@ -42,7 +42,7 @@ const WeatherList = () => {
           <li key={index} className="bg-white shadow-md rounded-2xl p-4">
             <Link
               to={`/station/${index}`}
-              className="text-black hover:text-sky-800"
+              className="text-black hover:text-sky-800 text-sm sm:text-base"
             >
               สถานี: {station.StationNameThai} ({station.Province})
             </Link>
@@ -52,7 +52,7 @@ const WeatherList = () => {
 
       {/* แสดงข้อความเมื่อไม่มีผลลัพธ์ */}
       {filteredStations.length === 0 && (
-        <p className="text-center text-gray-500">ไม่พบสถานีหรือจังหวัดที่ตรงกัน</p>
+        <p className="text-center text-black">ไม่พบสถานีหรือจังหวัดที่ตรงกัน</p>
       )}
     </div>
   );

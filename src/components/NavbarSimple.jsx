@@ -14,14 +14,14 @@ function classNames(...classes) {
 export default function NavbarSimple() {
   return (
     <Disclosure as="nav" className="bg-sky-800">
-      <div className="mx-auto px-20 sm:px-20 md:px-20 lg:px-20 xl:px-20 2xl:px-20">
+      <div className="mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-20 2xl:px-20">
         <div className="relative flex h-16 items-center justify-between">
 
           {/* ฝั่งซ้าย: Title */}
           <div className="flex items-center">
             <Link
               to={'/'}
-              className="text-white text-xl font-bold"
+              className="text-white text-lg sm:text-xl font-bold"
             >
               Boonpa Sky Watcher
             </Link>
@@ -43,7 +43,6 @@ export default function NavbarSimple() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  aria-current={item.current ? 'page' : undefined}
                   className='text-white hover:bg-white hover:text-sky-800 rounded-md px-3 py-2 text-sm font-medium'
                 >
                   {item.name}
@@ -62,11 +61,7 @@ export default function NavbarSimple() {
               key={item.name}
               as={Link}
               to={item.href}
-              aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
-              )}
+              className='text-white hover:bg-white hover:text-sky-800 block rounded-md px-3 py-2 text-sm font-medium'
             >
               {item.name}
             </DisclosureButton>

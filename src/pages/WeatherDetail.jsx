@@ -12,44 +12,44 @@ const WeatherDetail = () => {
   }
 
   return (
-    <div className="container mx-auto px-20 ms:px-20 md:px-20 lg:px-20 pt-8">
+    <div className="container mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-20 2xl:px-20 pt-8">
       <div className="bg-white shadow-md rounded-2xl p-6">
-        <h2 className="text-3xl font-bold mb-6 text-center">
+        <h2 className="text-xl sm:text-2xl font-bold text-center mb-4">
           สถานี {station.StationNameThai}
         </h2>
-        <p className="text-lg mb-6 text-center">จังหวัด: {station.Province}</p>
+        <p className="text-base sm:text-lg mb-6 text-center">จังหวัด: {station.Province}</p>
         
         {/* Grid layout สำหรับการแสดงข้อมูล */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">ความกดอากาศที่ระดับน้ำทะเล: {station.Observation.MeanSeaLevelPressure} hPa</p>
+            <p className="text-sm sm:text-base ">ความกดอากาศที่ระดับน้ำทะเล: {station.Observation.MeanSeaLevelPressure} hPa</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">อุณหภูมิ: {station.Observation.Temperature}°C</p>
+            <p className="text-sm sm:text-base">อุณหภูมิ: {station.Observation.Temperature}°C</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">อุณหภูมิสูงสุด: {station.Observation.MaxTemperature}°C</p>
+            <p className="text-sm sm:text-base">อุณหภูมิสูงสุด: {station.Observation.MaxTemperature}°C</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">ต่างจากอุณหภูมิสูงสุด: {station.Observation.DifferentFromMaxTemperature}°C</p>
+            <p className="text-sm sm:text-base">ต่างจากอุณหภูมิสูงสุด: {station.Observation.DifferentFromMaxTemperature}°C</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">อุณหภูมิต่ำสุด: {station.Observation.MinTemperature}°C</p>
+            <p className="text-sm sm:text-base">อุณหภูมิต่ำสุด: {station.Observation.MinTemperature}°C</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">ต่างจากอุณหภูมิต่ำสุด: {station.Observation.DifferentFromMinTemperature}°C</p>
+            <p className="text-sm sm:text-base">ต่างจากอุณหภูมิต่ำสุด: {station.Observation.DifferentFromMinTemperature}°C</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">ความชื้นสัมพัทธ์: {station.Observation.RelativeHumidity}%</p>
+            <p className="text-sm sm:text-base">ความชื้นสัมพัทธ์: {station.Observation.RelativeHumidity}%</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">ทิศทางลม: {station.Observation.WindDirection}°</p>
+            <p className="text-sm sm:text-base">ทิศทางลม: {station.Observation.WindDirection}°</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">ความเร็วลม: {station.Observation.WindSpeed} km/h</p>
+            <p className="text-sm sm:text-base">ความเร็วลม: {station.Observation.WindSpeed} km/h</p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg shadow">
-            <p className="text-lg">ปริมาณน้ำฝน: {station.Observation.Rainfall} mm</p>
+            <p className="text-sm sm:text-base">ปริมาณน้ำฝน: {station.Observation.Rainfall} mm</p>
           </div>
         </div>
       </div>
