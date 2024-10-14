@@ -14,7 +14,7 @@ const WeatherForecast = () => {
   );
 
   return (
-    <div className="container mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-20 2xl:px-20 pt-8">
+    <div className="container mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-12 2xl:px-12 pt-8">
       <h1 className="text-xl sm:text-2xl font-bold text-center mb-4">พยากรณ์อากาศ 7 วัน</h1>
 
       {/* Search bar */}

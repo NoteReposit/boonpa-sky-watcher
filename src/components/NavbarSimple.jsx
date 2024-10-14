@@ -2,27 +2,27 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 
+import logo from '../assets/img/logo.svg'
+
 const navigation = [
   { name: 'หน้าแรก', href: '/' },
   { name: 'พยากรณ์อากาศ', href: '/weather-forecast' },
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function NavbarSimple() {
   return (
     <Disclosure as="nav" className="bg-sky-800">
-      <div className="mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-20 2xl:px-20">
+      <div className="mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-12 2xl:px-12">
         <div className="relative flex h-16 items-center justify-between">
 
           {/* ฝั่งซ้าย: Title */}
           <div className="flex items-center">
             <Link
               to={'/'}
-              className="text-white text-lg sm:text-xl font-bold"
+              className="flex items-center text-white text-lg sm:text-xl font-bold"
             >
+              {/* เพิ่มโลโก้ */}
+              <img src={logo} alt="Logo" className="h-8 w-8 mr-2" />
               Boonpa Sky Watcher
             </Link>
           </div>

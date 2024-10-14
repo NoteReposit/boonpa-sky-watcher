@@ -12,7 +12,7 @@ const WeatherDetail = () => {
   }
 
   return (
-    <div className="container mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-20 2xl:px-20 pt-8">
+    <div className="container mx-auto px-5 sm:px-5 md:px-5 lg:px-12 xl:px-12 2xl:px-12 pt-8">
       <div className="bg-white shadow-md rounded-2xl p-6">
         <h2 className="text-xl sm:text-2xl font-bold text-center mb-4">
           สถานี {station.StationNameThai}
